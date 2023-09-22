@@ -1,1 +1,27 @@
-👋
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrHanwoo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 id="title"></h1>
+  <span>Welcome 👋</span>
+
+  <script>
+    const title = document.getElementById('title');
+    const text = 'KrHanwoo';
+    let idx = 0;
+    const task = setInterval(() => {
+      title.innerText = text.substring(0, idx);
+      idx++;
+      if (idx >= 9) clearInterval(task);
+    }, 75); 
+  </script>
+</body>
+
+</html>
